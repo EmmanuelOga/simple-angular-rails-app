@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="span5">
+    <form ng-submit="create(title, body)" class='well'>
+    <h3>Notes</h3>
+      <fieldset>
+        <input ng-model='title' type="text" class="input-xlarge" placeholder="Title..." required>
+        <textarea rows='10' ng-model='body' type="text" class="input-xlarge" placeholder="Text..." required></textarea>
+        <br/>
+        <button type="submit" class="btn">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="span5 offset2">
+    <div class="well" ng-repeat="note in notes">
+      <a href="" title="Delete" ng-click="delete($index)" class="pull-right">Delete</a>
+      <h3>{{note.title}}</h3>
+      <p>{{note.body}}</p>
+    <div>
+  </div>
+<div>
